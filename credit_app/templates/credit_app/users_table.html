@@ -1,0 +1,35 @@
+{% extends 'credit_app/index.html' %}
+{% block title %}Users{% endblock %}
+{% block body %}
+    
+
+<div class="site-wrapper">
+    <h3>All Users</h3>
+    <div class="container">
+                <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Username</th>
+                                <th>Joining Date</th>
+                                <th>Credits</th>
+                                <th>Transactions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for user in all_users %}
+                            <tr>
+                                <td><a href="{% url 'credit_app:user_info' user.id %}">{{ user.username }}</a></td>
+                                <td>{{ user.join_date }}</td>
+                                <td>{{ user.credits }}</td>
+                                <td>{{ user.num_transactions }}</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>>
+                    </table>
+                  </div>
+                {% endblock %}
+            </body>
+            </html>
+            
+        </div>    
+</div>

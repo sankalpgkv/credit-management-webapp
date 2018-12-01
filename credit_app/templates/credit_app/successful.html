@@ -1,0 +1,14 @@
+{% extends 'credit_app/index.html' %}
+{% block title %}{{ user.username }}{% endblock %}
+{% block body %}
+
+<div class="site-wrapper">
+<div class="container jumbotron" id=user_info>
+        <h1>Transaction Successful</h1>
+        <img src="http://phillipsdinnes.co.uk/images/tick.jpg">
+        <p class="lead"><br>
+            <a href="{% url 'credit_app:index' %}" class="btn btn-lg btn-default">Go to Home</a>
+        </p>    
+</div>
+</div>
+{% endblock %}

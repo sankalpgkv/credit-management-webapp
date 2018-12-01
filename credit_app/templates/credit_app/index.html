@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{% block title %}Home{% endblock %}</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Zeta Template Project">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'credit_app/bootstrap.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'credit_app/main_styles.css' %}">
+</head>
+
+{% block body %}
+<body>
+    <div class="site-wrapper">
+
+        <div class="site-wrapper-inner">
+  
+          <div class="container">
+  
+            <div class="masthead clearfix">
+              <div class="container inner">
+                <h3 class="masthead-brand">Credit Management App</h3>
+              </div>
+            </div>
+  
+            <div class="inner cover" id="image_target">
+              <h1 class="cover-heading">Manage Your Credits.</h1><br>
+              <p class="lead">Send and Receive credits and keep track of your each and every credit transaction</p>
+              <p class="lead"><br>
+                <a href="{% url 'credit_app:users' %}" class="btn btn-lg btn-default">View Users</a>
+              </p>
+            </div>
+  
+          </div>
+  
+        </div>
+  
+      </div>
+</body>
+{% endblock %}
+</html>
+  
